@@ -57,8 +57,8 @@ gantt
     * 빈 상태(Empty State) 안내 영역
 
 #### 1.2 Deliverables (산출물)
-* [ ] 헤더, 입력 폼, 리스트/빈 상태 UI 와이어프레임 구현
-* [ ] Tailwind CSS / Vanilla CSS 기반의 현대적이고 깔끔한 단일 화면 디자인 적용
+* [x] 헤더, 입력 폼, 리스트/빈 상태 UI 와이어프레임 구현
+* [x] Tailwind CSS / Vanilla CSS 기반의 현대적이고 깔끔한 단일 화면 디자인 적용
 
 ---
 
