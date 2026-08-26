@@ -1,0 +1,81 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  color-scheme: light;
+  --background: oklch(0.975 0.012 90);
+  --foreground: oklch(0.24 0.025 255);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.025 255);
+  --primary: oklch(0.46 0.15 255);
+  --primary-foreground: oklch(0.99 0 0);
+  --muted-foreground: oklch(0.54 0.035 255);
+  --border: oklch(0.9 0.02 255);
+  --ring: oklch(0.64 0.12 255);
+  --radius: 0.9rem;
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground antialiased; font-family: "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif; }
+}
+
+.eyebrow { color: oklch(0.53 0.12 255); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; }
+.brand-mark, .section-icon, .assignment-icon, .empty-icon { display: grid; place-items: center; }
+.brand-mark { width: 3rem; height: 3rem; border-radius: 0.8rem; background: oklch(0.93 0.045 255); color: oklch(0.46 0.15 255); }
+.brand-mark svg { width: 1.4rem; }
+.form-card { border: 1px solid var(--border); border-radius: 1.1rem; background: var(--card); padding: 1.5rem; box-shadow: 0 14px 36px oklch(0.3 0.04 255 / 0.055); }
+.section-icon { width: 2.35rem; height: 2.35rem; flex: none; border-radius: 0.65rem; background: oklch(0.96 0.025 255); color: oklch(0.46 0.15 255); }
+.section-icon svg { width: 1.1rem; }
+.field-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.field-group label { font-size: 0.84rem; font-weight: 600; }
+.input-wrap { position: relative; display: flex; align-items: center; border: 1px solid var(--border); border-radius: 0.65rem; background: var(--card); transition: border-color 160ms ease, box-shadow 160ms ease; }
+.input-wrap:focus-within { border-color: var(--ring); box-shadow: 0 0 0 3px oklch(0.64 0.12 255 / 0.14); }
+.input-wrap.has-error { border-color: oklch(0.62 0.16 25); }
+.input-wrap input { width: 100%; border: 0; outline: 0; background: transparent; padding: 0.78rem 0.9rem; font: inherit; font-size: 0.9rem; }
+.input-wrap input::placeholder { color: oklch(0.69 0.025 255); }
+.character-count { position: absolute; right: 0.8rem; bottom: -1.25rem; color: var(--muted-foreground); font-size: 0.7rem; }
+.date-wrap svg { margin-left: 0.9rem; width: 1rem; color: var(--muted-foreground); }
+.date-wrap input { padding-left: 0.65rem; }
+.error-text { color: oklch(0.52 0.16 25); font-size: 0.75rem; }
+.primary-button { display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem; min-height: 2.85rem; border: 0; border-radius: 0.65rem; background: var(--primary); color: var(--primary-foreground); font-size: 0.88rem; font-weight: 600; cursor: pointer; transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease; }
+.primary-button:hover { background: oklch(0.42 0.15 255); box-shadow: 0 8px 18px oklch(0.46 0.15 255 / 0.2); }
+.primary-button:active { transform: translateY(1px); }
+.primary-button svg { width: 1rem; }
+.count-badge { border-radius: 999px; background: oklch(0.93 0.035 255); padding: 0.2rem 0.55rem; color: oklch(0.46 0.15 255); font-size: 0.72rem; font-weight: 600; }
+.assignment-card { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border: 1px solid var(--border); border-radius: 0.9rem; background: var(--card); padding: 1rem 1.1rem; box-shadow: 0 5px 16px oklch(0.3 0.04 255 / 0.035); }
+.assignment-info { display: flex; min-width: 0; align-items: center; gap: 0.85rem; }
+.assignment-icon { width: 2.2rem; height: 2.2rem; flex: none; border-radius: 0.6rem; background: oklch(0.97 0.018 255); color: oklch(0.54 0.07 255); }
+.assignment-icon svg { width: 1rem; }
+.assignment-card p svg { width: 0.85rem; }
+.dday-badge { min-width: 3.8rem; border-radius: 0.55rem; padding: 0.45rem 0.6rem; text-align: center; font-size: 0.78rem; font-weight: 700; }
+.dday-normal { background: oklch(0.94 0.035 255); color: oklch(0.46 0.13 255); }
+.dday-soon { background: oklch(0.95 0.06 75); color: oklch(0.52 0.12 55); }
+.dday-today { background: oklch(0.93 0.08 25); color: oklch(0.5 0.16 25); }
+.remove-button { display: grid; place-items: center; width: 1.8rem; height: 1.8rem; border: 0; border-radius: 0.45rem; background: transparent; color: oklch(0.7 0.025 255); cursor: pointer; }
+.remove-button:hover { background: oklch(0.95 0.025 255); color: oklch(0.45 0.04 255); }
+.remove-button svg { width: 0.9rem; }
+.empty-state { display: flex; min-height: 13rem; flex-direction: column; align-items: center; justify-content: center; gap: 0.65rem; border: 1px dashed oklch(0.85 0.025 255); border-radius: 0.9rem; text-align: center; }
+.empty-icon { width: 3rem; height: 3rem; margin-bottom: 0.3rem; border-radius: 0.8rem; background: oklch(0.95 0.025 255); color: oklch(0.57 0.06 255); }
+.empty-icon svg { width: 1.25rem; }
+.empty-state h3 { font-size: 0.95rem; font-weight: 600; }
+.empty-state p { font-size: 0.82rem; color: var(--muted-foreground); }
+footer svg { width: 0.8rem; color: oklch(0.56 0.12 145); }
+@media (min-width: 640px) { .form-card { padding: 2rem; } }
+@media (max-width: 480px) { .assignment-card { align-items: flex-start; } .assignment-card > div:last-child { flex-direction: column; align-items: flex-end; gap: 0.4rem; } .remove-button { order: 2; } }
