@@ -77,5 +77,25 @@
 .empty-state h3 { font-size: 0.95rem; font-weight: 600; }
 .empty-state p { font-size: 0.82rem; color: var(--muted-foreground); }
 footer svg { width: 0.8rem; color: oklch(0.56 0.12 145); }
+
+/* Gemini AI Custom Styles */
+.ai-badge { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.2rem 0.55rem; border-radius: 999px; background: linear-gradient(135deg, oklch(0.92 0.08 280), oklch(0.94 0.06 200)); color: oklch(0.38 0.18 280); font-size: 0.72rem; font-weight: 700; border: 1px solid oklch(0.85 0.08 280); }
+.ai-button { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.4rem 0.75rem; border-radius: 0.6rem; background: linear-gradient(135deg, oklch(0.48 0.18 280), oklch(0.45 0.16 230)); color: #fff; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 160ms ease; border: 0; box-shadow: 0 4px 12px oklch(0.45 0.16 250 / 0.25); }
+.ai-button:hover { opacity: 0.93; transform: translateY(-1px); box-shadow: 0 6px 16px oklch(0.45 0.16 250 / 0.35); }
+.ai-button:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+.tab-group { display: flex; gap: 0.4rem; padding: 0.25rem; border-radius: 0.65rem; background: oklch(0.95 0.02 255); margin-bottom: 1rem; }
+.tab-button { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; padding: 0.45rem 0.75rem; border-radius: 0.5rem; border: 0; background: transparent; color: var(--muted-foreground); font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 150ms ease; }
+.tab-button.active { background: var(--card); color: var(--foreground); box-shadow: 0 2px 6px oklch(0.2 0.03 255 / 0.08); }
+
+.ai-guide-card { border: 1px solid oklch(0.88 0.06 280); border-radius: 0.85rem; background: linear-gradient(180deg, oklch(0.98 0.02 280 / 0.6), oklch(1 0 0)); padding: 1.1rem; margin-top: 0.75rem; box-shadow: 0 8px 24px oklch(0.3 0.06 280 / 0.06); }
+.ai-guide-header { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid oklch(0.92 0.04 280); padding-bottom: 0.6rem; margin-bottom: 0.85rem; }
+.ai-motivation { font-size: 0.84rem; line-height: 1.45; color: oklch(0.38 0.14 280); background: oklch(0.95 0.04 280 / 0.7); padding: 0.6rem 0.8rem; border-radius: 0.6rem; border-left: 3px solid oklch(0.5 0.18 280); margin-bottom: 0.85rem; }
+.ai-today-box { font-size: 0.83rem; background: oklch(0.97 0.03 140 / 0.8); border: 1px solid oklch(0.9 0.05 140); padding: 0.6rem 0.85rem; border-radius: 0.6rem; margin-bottom: 0.85rem; color: oklch(0.35 0.12 140); }
+.ai-step-item { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.82rem; padding: 0.4rem 0; }
+.ai-step-num { width: 1.25rem; height: 1.25rem; border-radius: 999px; background: oklch(0.48 0.18 280); color: #fff; display: grid; place-items: center; font-size: 0.7rem; font-weight: 700; flex: none; margin-top: 0.1rem; }
+.ai-step-duration { margin-left: auto; color: var(--muted-foreground); font-size: 0.73rem; background: oklch(0.94 0.02 255); padding: 0.15rem 0.45rem; border-radius: 0.4rem; flex: none; }
+
 @media (min-width: 640px) { .form-card { padding: 2rem; } }
 @media (max-width: 480px) { .assignment-card { align-items: flex-start; } .assignment-card > div:last-child { flex-direction: column; align-items: flex-end; gap: 0.4rem; } .remove-button { order: 2; } }
+

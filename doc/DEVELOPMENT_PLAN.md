@@ -146,6 +146,18 @@ interface Assignment {
 
 ---
 
+### 🏃 Sprint 5: Gemini AI 기반 지능형 과제 서비스 연동
+> **목표:** Google Gemini API (`gemini-3.6-flash`)를 연동하여 AI 자연어 과제 입력 및 과제 세부 실행 가이드 자동 생성 기능 구축
+
+#### 5.1 Deliverables (산출물)
+* [x] Next.js App Router 백엔드 API 엔드포인트 (`app/api/ai/route.ts`) 구현
+* [x] Google Gemini API (`gemini-3.6-flash`) 연동 및 안전한 환경변수(`GEMINI_API_KEY`) 보안 설정
+* [x] AI 자연어 파서 기능 구현 (자연어 입력 -> 과제명, 마감일 자동 파싱 및 폼 바인딩)
+* [x] AI 과제 실행 가이드 기능 구현 (D-Day 맞춤 조언, 오늘 할 일, 3단계 추천 실행 체크리스트)
+* [x] 프론트엔드 UI/UX 통합 (`components/deadline-counter.tsx` 및 `app/globals.css` AI 스타일링)
+
+---
+
 ## 3. 개발 가이드라인 및 진행 절차
 
 1. **스프린트 진행 방법:**
@@ -153,3 +165,4 @@ interface Assignment {
    - 예외 처리 조건(Sprint 3)은 테스트 케이스 작성 후 꼼꼼히 확인합니다.
 2. **문서 유지관리:**
    - 본 문서는 `doc/DEVELOPMENT_PLAN.md`에 보관하며, 변경 요구사항이 발생할 경우 버전 업데이트를 진행합니다.
+
