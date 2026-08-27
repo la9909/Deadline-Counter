@@ -54,12 +54,9 @@ npx vercel env add GEMINI_API_KEY
 
 ---
 
-## 4단계: 프로덕션(운영) 최종 배포
+## 5단계: 배포 완료 및 접속 URL
 
-환경 변수 등록 후, 프로덕션 도메인으로 최종 배포를 완료합니다:
+- **🌐 프로덕션 서비스 URL:** [https://v0test-zeta.vercel.app](https://v0test-zeta.vercel.app)
+- **⚙️ Vercel 대시보드 프로젝트:** [https://vercel.com/la9909s-projects/v0test](https://vercel.com/la9909s-projects/v0test)
+- **🤖 Gemini AI 연동 상태:** `GEMINI_API_KEY` 환경 변수 적용 및 프로덕션 AI 파싱 동작 검증 완료 (200 OK)
 
-```bash
-npx vercel --prod
-```
-
-배포가 완료되면 `https://deadline-counter-xxx.vercel.app` 과 같은 고유 URL이 생성되며, 전 세계 어디서나 접속하여 Gemini AI 과제 카운터를 사용할 수 있습니다!
